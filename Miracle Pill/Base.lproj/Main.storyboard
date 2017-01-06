@@ -124,7 +124,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-hP-kKL" userLabel="State Stack View">
-                                <rect key="frame" x="12" y="435" width="351" height="299"/>
+                                <rect key="frame" x="12" y="435" width="351" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7D-b0-iOR" userLabel="State">
                                         <rect key="frame" x="8" y="8" width="335" height="21"/>
@@ -135,19 +135,20 @@
                                         <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy7-gM-DbA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy7-gM-DbA" userLabel="State Button">
                                         <rect key="frame" x="8" y="37" width="335" height="30"/>
                                         <state key="normal" title="Select State"/>
                                         <connections>
-                                            <action selector="statePickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Adz-i8-QoM"/>
+                                            <action selector="stateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O00-LV-6jS"/>
                                         </connections>
                                     </button>
-                                    <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-ZR-eZa">
-                                        <rect key="frame" x="8" y="75" width="335" height="216"/>
-                                    </pickerView>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-ZR-eZa" userLabel="State Picker">
+                                <rect key="frame" x="20" y="518" width="335" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -180,8 +181,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="statePickButton" destination="iy7-gM-DbA" id="kNO-5F-lpe"/>
-                        <outlet property="statePicker" destination="RYP-ZR-eZa" id="g6d-uZ-gUK"/>
+                        <outlet property="statePicker" destination="RYP-ZR-eZa" id="FCJ-BO-i2i"/>
+                        <outlet property="statePickerButton" destination="iy7-gM-DbA" id="Vpe-h4-3H5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
