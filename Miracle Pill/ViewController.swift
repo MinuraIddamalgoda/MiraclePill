@@ -12,24 +12,27 @@ class ViewController:
     UIViewController,
     UIPickerViewDataSource,
     UIPickerViewDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Setting up UIPickerView
+        statePicker.dataSource = self
+        statePicker.delegate = self
+    }
 
-    // Instance vars
-    let states: [String] = ["Alaska", "Arkansas", "Alabama", "California", "Maine", "New York"]
+    // Variables
+    let states: [String] = ["Western Australia", "New South Wales", "Northern Territory", "Victoria", "ACT", "Queensland"]
     
     // MARK: - Outlets
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        statePicker.dataSource = self
-        statePicker.delegate = self
-    }
+    @IBOutlet var statePickerView: UIView!
+    @IBOutlet var topLevelView: UIView!
     
     // MARK: - Actions
     @IBAction func stateButtonPressed(_ sender: UIButton) {
-        statePicker.isHidden = false
-        
+        print("state button pressed")
+        showPopup()
     }
     
     // MARK: - Delegate Methods
@@ -48,7 +51,19 @@ class ViewController:
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         statePickerButton.setTitle(states[row], for: UIControlState.normal)
-        statePicker.isHidden = true
+    }
+    
+    // MARK: - Show/Hide methods
+    func showPopup() {
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.dark))
+        visualEffectView.frame = topLevelView.bounds
+        topLevelView.addSubview(visualEffectView)
+        
+        self.view.addSubview(statePickerView)
+        statePickerView.center = self.view.center
+        print("state view showing")
+        
+        
     }
 }
 

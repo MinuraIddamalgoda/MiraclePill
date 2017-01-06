@@ -18,18 +18,18 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Top Level View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="XQS-0G-rvD">
-                                <rect key="frame" x="142.5" y="30" width="90" height="90"/>
+                                <rect key="frame" x="143" y="30" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XQS-0G-rvD" secondAttribute="height" multiplier="1:1" id="KKH-M3-P8I"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miracle Pills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoC-qS-7uy">
-                                <rect key="frame" x="142.5" y="135" width="91" height="20.5"/>
+                                <rect key="frame" x="143" y="135" width="91" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-3T-rLc">
-                                <rect key="frame" x="168.5" y="163.5" width="39" height="21"/>
+                                <rect key="frame" x="169" y="163.5" width="39" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LfX-kw-s7E"/>
                                     <constraint firstAttribute="width" constant="39" id="tgi-nY-C02"/>
@@ -124,7 +124,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-hP-kKL" userLabel="State Stack View">
-                                <rect key="frame" x="12" y="435" width="351" height="75"/>
+                                <rect key="frame" x="12" y="435.5" width="351" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7D-b0-iOR" userLabel="State">
                                         <rect key="frame" x="8" y="8" width="335" height="21"/>
@@ -145,10 +145,28 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
-                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-ZR-eZa" userLabel="State Picker">
-                                <rect key="frame" x="20" y="518" width="335" height="129"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-3m-gHK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Kvd-nl-Cao">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ftv-ns-hZJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="DfH-v0-NT0">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -179,13 +197,36 @@
                             <constraint firstItem="bGH-c8-XRE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xti-NJ-cEn"/>
                             <constraint firstItem="46l-hs-cbX" firstAttribute="centerX" secondItem="XgG-o6-YPw" secondAttribute="centerX" id="yGb-yu-Is9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2ov-3m-gHK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="statePicker" destination="RYP-ZR-eZa" id="FCJ-BO-i2i"/>
                         <outlet property="statePickerButton" destination="iy7-gM-DbA" id="Vpe-h4-3H5"/>
+                        <outlet property="statePickerView" destination="Q3d-zd-GJ6" id="2ly-gf-E7I"/>
+                        <outlet property="topLevelView" destination="8bC-Xf-vdC" id="ZEe-U4-L46"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleAspectFill" id="Q3d-zd-GJ6">
+                    <rect key="frame" x="0.0" y="0.0" width="351" height="300"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="135" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-ZR-eZa" userLabel="State Picker">
+                            <rect key="frame" x="20" y="20" width="311" height="260"/>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="RYP-ZR-eZa" secondAttribute="bottom" constant="20" id="7hC-Cp-OZK"/>
+                        <constraint firstAttribute="trailing" secondItem="RYP-ZR-eZa" secondAttribute="trailing" constant="20" id="fz5-dL-JLi"/>
+                        <constraint firstItem="RYP-ZR-eZa" firstAttribute="top" secondItem="Q3d-zd-GJ6" secondAttribute="top" constant="20" id="i6P-td-pt6"/>
+                        <constraint firstItem="RYP-ZR-eZa" firstAttribute="leading" secondItem="Q3d-zd-GJ6" secondAttribute="leading" constant="20" id="xiJ-aV-K6u"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="112.8" y="107.49625187406298"/>
         </scene>
