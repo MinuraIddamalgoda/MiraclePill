@@ -43,7 +43,7 @@
                                 </constraints>
                             </view>
                             <view alpha="0.34999999403953552" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6da-tf-zK0" userLabel="Bottom Divider">
-                                <rect key="frame" x="24" y="602" width="327" height="1"/>
+                                <rect key="frame" x="24" y="603" width="327" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ViT-DU-93y"/>
@@ -131,32 +131,8 @@
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TPH-pr-fLf" userLabel="Zip Stack View">
-                                <rect key="frame" x="12" y="511" width="351" height="75"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-Vk-Q0m" userLabel="Zip Code">
-                                        <rect key="frame" x="8" y="8" width="335" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="8Ok-H0-rQb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your zip code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-jY-2Jb">
-                                        <rect key="frame" x="8" y="37" width="335" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="HFa-CN-1d9"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-hP-kKL" userLabel="State Stack View">
-                                <rect key="frame" x="12" y="435.5" width="351" height="75"/>
+                                <rect key="frame" x="12" y="435.5" width="351" height="158"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7D-b0-iOR" userLabel="State">
                                         <rect key="frame" x="8" y="8" width="335" height="21"/>
@@ -174,38 +150,40 @@
                                             <action selector="stateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O00-LV-6jS"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TPH-pr-fLf" userLabel="Zip Stack View">
+                                        <rect key="frame" x="8" y="75" width="335" height="75"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-Vk-Q0m" userLabel="Zip Code">
+                                                <rect key="frame" x="8" y="8" width="319" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="8Ok-H0-rQb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your zip code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-jY-2Jb">
+                                                <rect key="frame" x="8" y="37" width="319" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="HFa-CN-1d9"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </stackView>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyNowBtn" translatesAutoresizingMaskIntoConstraints="NO" id="lT6-fd-G2F">
-                                <rect key="frame" x="75" y="613" width="225" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyNowBtn" highlightedImage="buyNowBtn" translatesAutoresizingMaskIntoConstraints="NO" id="lT6-fd-G2F" userLabel="buyNowImageView">
+                                <rect key="frame" x="75" y="614" width="225" height="45"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="CSK-Ca-32h" appends="YES" id="aTW-TT-4d0"/>
                                 </connections>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-3m-gHK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Kvd-nl-Cao">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ftv-ns-hZJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="DfH-v0-NT0">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="light"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                    </subviews>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -220,19 +198,14 @@
                             <constraint firstItem="6da-tf-zK0" firstAttribute="centerX" secondItem="Tl0-cF-BUg" secondAttribute="centerX" id="IB1-m1-vSy"/>
                             <constraint firstItem="aoC-qS-7uy" firstAttribute="centerX" secondItem="XQS-0G-rvD" secondAttribute="centerX" id="KVl-Ta-lVQ"/>
                             <constraint firstItem="XgG-o6-YPw" firstAttribute="leading" secondItem="bGH-c8-XRE" secondAttribute="leading" constant="-8" id="Lwg-wJ-HUE"/>
-                            <constraint firstItem="TPH-pr-fLf" firstAttribute="trailing" secondItem="XgG-o6-YPw" secondAttribute="trailing" id="O6f-v3-aA2"/>
                             <constraint firstItem="Tl0-cF-BUg" firstAttribute="width" secondItem="XgG-o6-YPw" secondAttribute="width" id="Pn1-xH-mDx"/>
                             <constraint firstItem="XgG-o6-YPw" firstAttribute="trailing" secondItem="bGH-c8-XRE" secondAttribute="trailing" constant="8" id="PtT-a7-8ql"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TPH-pr-fLf" secondAttribute="bottom" constant="81" id="Xdr-rS-gLr"/>
                             <constraint firstItem="bGH-c8-XRE" firstAttribute="top" secondItem="bqs-3T-rLc" secondAttribute="bottom" constant="10" id="YiU-tv-ky6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lT6-fd-G2F" secondAttribute="bottom" constant="8" id="b2f-Fd-HM0"/>
-                            <constraint firstItem="TPH-pr-fLf" firstAttribute="leading" secondItem="XgG-o6-YPw" secondAttribute="leading" id="bVh-3y-N5A"/>
                             <constraint firstItem="6da-tf-zK0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="bgr-L3-DfE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6da-tf-zK0" secondAttribute="trailing" constant="8" id="dwn-Fn-Opa"/>
-                            <constraint firstItem="TPH-pr-fLf" firstAttribute="centerX" secondItem="XgG-o6-YPw" secondAttribute="centerX" id="eEq-7Q-Xeq"/>
                             <constraint firstItem="YzE-hP-kKL" firstAttribute="centerX" secondItem="XgG-o6-YPw" secondAttribute="centerX" id="fP8-up-PZA"/>
                             <constraint firstItem="46l-hs-cbX" firstAttribute="top" secondItem="XgG-o6-YPw" secondAttribute="bottom" id="gf3-rV-NBk"/>
-                            <constraint firstItem="6da-tf-zK0" firstAttribute="top" secondItem="TPH-pr-fLf" secondAttribute="bottom" constant="16" id="hif-bW-kgU"/>
                             <constraint firstItem="XgG-o6-YPw" firstAttribute="top" secondItem="bGH-c8-XRE" secondAttribute="bottom" constant="16" id="huz-Kt-mHT"/>
                             <constraint firstItem="46l-hs-cbX" firstAttribute="trailing" secondItem="XgG-o6-YPw" secondAttribute="trailing" id="ilV-Cc-05M"/>
                             <constraint firstItem="bqs-3T-rLc" firstAttribute="centerX" secondItem="XQS-0G-rvD" secondAttribute="centerX" id="jdL-NQ-JXZ"/>
@@ -244,17 +217,14 @@
                             <constraint firstItem="Tl0-cF-BUg" firstAttribute="top" secondItem="46l-hs-cbX" secondAttribute="bottom" id="raA-6W-nXk"/>
                             <constraint firstItem="YzE-hP-kKL" firstAttribute="trailing" secondItem="XgG-o6-YPw" secondAttribute="trailing" id="tlk-qo-bAZ"/>
                             <constraint firstItem="aoC-qS-7uy" firstAttribute="top" secondItem="XQS-0G-rvD" secondAttribute="bottom" constant="15" id="v4Z-Ex-gbS"/>
-                            <constraint firstItem="TPH-pr-fLf" firstAttribute="width" secondItem="XgG-o6-YPw" secondAttribute="width" id="vqg-GU-Pke"/>
                             <constraint firstItem="bGH-c8-XRE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xti-NJ-cEn"/>
                             <constraint firstItem="46l-hs-cbX" firstAttribute="centerX" secondItem="XgG-o6-YPw" secondAttribute="centerX" id="yGb-yu-Is9"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="2ov-3m-gHK"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="buyNowGesture" destination="CSK-Ca-32h" id="f3p-Ya-cc7"/>
+                        <outlet property="buyNowImage" destination="lT6-fd-G2F" id="U7P-hL-P0o"/>
+                        <outlet property="orderConfirmationView" destination="KkX-L8-X2T" id="sp7-Zi-ecO"/>
                         <outlet property="statePicker" destination="RYP-ZR-eZa" id="FCJ-BO-i2i"/>
                         <outlet property="statePickerButton" destination="iy7-gM-DbA" id="Vpe-h4-3H5"/>
                         <outlet property="statePickerView" destination="Q3d-zd-GJ6" id="2ly-gf-E7I"/>
@@ -296,7 +266,11 @@
                         <constraint firstAttribute="bottom" secondItem="pRV-2C-HKn" secondAttribute="bottom" constant="8" id="xvZ-OX-bmu"/>
                     </constraints>
                 </view>
-                <tapGestureRecognizer id="CSK-Ca-32h" userLabel="Buy Now Gesture Recognizer"/>
+                <tapGestureRecognizer id="CSK-Ca-32h" userLabel="Buy Now Gesture Recognizer">
+                    <connections>
+                        <action selector="tapBuyNow:" destination="BYZ-38-t0r" id="V7z-qi-Rar"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <view contentMode="scaleToFill" id="KkX-L8-X2T" userLabel="Order Confirmation View">
                     <rect key="frame" x="0.0" y="0.0" width="235" height="235"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

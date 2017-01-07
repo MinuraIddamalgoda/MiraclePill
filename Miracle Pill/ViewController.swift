@@ -18,6 +18,11 @@ class ViewController:
         // Setting up UIPickerView
         statePicker.dataSource = self
         statePicker.delegate = self
+        
+        // Setting up tap recogniser for the 'Buy Now' button
+        buyNowImage.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapBuyNow(_:)))
+        buyNowImage.addGestureRecognizer(tapGesture)
     }
 
     // MARK: - Variables
@@ -26,18 +31,29 @@ class ViewController:
     
     
     // MARK: - Outlets
-    @IBOutlet weak var statePicker: UIPickerView!
-    @IBOutlet weak var statePickerButton: UIButton!
+    // MARK: UIViews
     @IBOutlet var statePickerView: UIView!
     @IBOutlet var topLevelView: UIView!
+    @IBOutlet var orderConfirmationView: UIView!
+    
+    // MARK: Other Views
+    @IBOutlet weak var statePicker: UIPickerView!
+    @IBOutlet weak var statePickerButton: UIButton!
+    @IBOutlet var buyNowGesture: UITapGestureRecognizer!
+    @IBOutlet weak var buyNowImage: UIImageView!
+    
     
     // MARK: - Actions
     @IBAction func stateButtonPressed(_ sender: UIButton) {
-        showPopup()
+        showPopup(statePickerView)
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
-        hidePopup()
+        hidePopup(statePickerView)
+    }
+    
+    @IBAction func tapBuyNow(_ sender: UITapGestureRecognizer) {
+        showPopup(orderConfirmationView)
     }
     
     // MARK: - Delegate Methods
@@ -59,20 +75,19 @@ class ViewController:
     }
     
     // MARK: - Show/Hide Popup Methods
-    func showPopup() {
+    func showPopup(_ viewToShow: UIView) {
         // First adding a blue effect behind the picker view
         darkVisualEffectView.frame = topLevelView.bounds
         topLevelView.addSubview(darkVisualEffectView)
         
-        // Then showing the picker view itself
-        statePickerView.layer.cornerRadius = 5
-        statePickerView.center = self.view.center
-        self.view.addSubview(statePickerView)
+        // Then showing the view itself
+        viewToShow.layer.cornerRadius = 5
+        viewToShow.center = self.view.center
+        self.view.addSubview(viewToShow)
     }
     
-    func hidePopup() {
-        //self.view.removeFromSuperview()
-        statePickerView.removeFromSuperview()
+    func hidePopup(_ viewToHide: UIView) {
+        viewToHide.removeFromSuperview()
         darkVisualEffectView.removeFromSuperview()
     }
 }
