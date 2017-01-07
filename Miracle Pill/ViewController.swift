@@ -20,8 +20,10 @@ class ViewController:
         statePicker.delegate = self
     }
 
-    // Variables
+    // MARK: - Variables
     let states: [String] = ["Western Australia", "New South Wales", "Northern Territory", "Victoria", "ACT", "Queensland"]
+    let darkVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.dark))
+    
     
     // MARK: - Outlets
     @IBOutlet weak var statePicker: UIPickerView!
@@ -31,8 +33,11 @@ class ViewController:
     
     // MARK: - Actions
     @IBAction func stateButtonPressed(_ sender: UIButton) {
-        print("state button pressed")
         showPopup()
+    }
+    
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        hidePopup()
     }
     
     // MARK: - Delegate Methods
@@ -50,20 +55,25 @@ class ViewController:
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        statePickerButton.setTitle(states[row], for: UIControlState.normal)
+        statePickerButton.setTitle(states[row] + " selected", for: UIControlState.normal)
     }
     
-    // MARK: - Show/Hide methods
+    // MARK: - Show/Hide Popup Methods
     func showPopup() {
-        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.dark))
-        visualEffectView.frame = topLevelView.bounds
-        topLevelView.addSubview(visualEffectView)
+        // First adding a blue effect behind the picker view
+        darkVisualEffectView.frame = topLevelView.bounds
+        topLevelView.addSubview(darkVisualEffectView)
         
-        self.view.addSubview(statePickerView)
+        // Then showing the picker view itself
+        statePickerView.layer.cornerRadius = 5
         statePickerView.center = self.view.center
-        print("state view showing")
-        
-        
+        self.view.addSubview(statePickerView)
+    }
+    
+    func hidePopup() {
+        //self.view.removeFromSuperview()
+        statePickerView.removeFromSuperview()
+        darkVisualEffectView.removeFromSuperview()
     }
 }
 
