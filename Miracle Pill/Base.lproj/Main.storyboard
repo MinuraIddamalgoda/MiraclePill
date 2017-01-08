@@ -245,7 +245,7 @@
                                         <constraint firstAttribute="width" secondItem="RYP-ZR-eZa" secondAttribute="height" multiplier="335:246" id="KVC-q4-bv1"/>
                                     </constraints>
                                 </pickerView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHI-Xv-dkD" userLabel="Done Button">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHI-Xv-dkD" userLabel="State Done Button">
                                     <rect key="frame" x="0.0" y="192" width="299" height="27"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="mHI-Xv-dkD" secondAttribute="height" multiplier="67:6" id="GER-ON-mlf"/>
@@ -272,23 +272,28 @@
                     </connections>
                 </tapGestureRecognizer>
                 <view contentMode="scaleToFill" id="KkX-L8-X2T" userLabel="Order Confirmation View">
-                    <rect key="frame" x="0.0" y="0.0" width="235" height="235"/>
+                    <rect key="frame" x="0.0" y="0.0" width="336" height="371"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="ipj-ba-h9c">
-                            <rect key="frame" x="0.0" y="0.0" width="235" height="235"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="ipj-ba-h9c" secondAttribute="height" multiplier="1:1" id="MfY-j8-bm8"/>
-                            </constraints>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="ipj-ba-h9c">
+                            <rect key="frame" x="0.0" y="18" width="336" height="307"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-Cj-Qvp" userLabel="Order Again Button">
+                            <rect key="frame" x="40" y="325" width="255" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.99993377923965454" green="1" blue="0.99988192319869995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Order Again"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iy4-5D-GB6"/>
+                                <action selector="orderAgainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUg-y6-4mJ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="ipj-ba-h9c" firstAttribute="top" secondItem="KkX-L8-X2T" secondAttribute="top" id="8cU-OO-VF2"/>
-                        <constraint firstItem="ipj-ba-h9c" firstAttribute="leading" secondItem="KkX-L8-X2T" secondAttribute="leading" id="CT5-K7-uLv"/>
-                        <constraint firstAttribute="bottom" secondItem="ipj-ba-h9c" secondAttribute="bottom" id="ynB-ho-2m0"/>
-                        <constraint firstAttribute="trailing" secondItem="ipj-ba-h9c" secondAttribute="trailing" id="ze7-2W-Nfh"/>
-                    </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="112.8" y="107.49625187406298"/>

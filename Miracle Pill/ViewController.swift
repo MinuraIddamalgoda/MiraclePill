@@ -56,6 +56,9 @@ class ViewController:
         showPopup(orderConfirmationView)
     }
     
+    @IBAction func orderAgainButtonPressed(_ sender: UIButton) {
+        hidePopup(orderConfirmationView)
+    }
     // MARK: - Delegate Methods
     // MARK: PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
